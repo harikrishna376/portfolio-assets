@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhupathi Hari Krishna | Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons for sleek icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        /* Custom styles for a polished look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* A deeper black for elegance */
+            color: #e5e7eb; /* Light gray for readability */
+        }
+
+        /* Custom gradient text */
+        .gradient-text {
+            background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Section header styling */
+        .section-header {
+            border-bottom: 2px solid;
+            border-image: linear-gradient(90deg, #3B82F6, #8B5CF6) 1;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Card styles for projects, education, etc. */
+        .card {
+            background-color: rgba(255, 255, 255, 0.05); /* Glassmorphism effect */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 0.75rem;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Specific hover effect for clickable certification cards */
+        .cert-card:hover {
+            background-color: rgba(59, 130, 246, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111827;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4B5563;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6B7280;
+        }
+        
+        /* Animation for elements revealing on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Skills dashboard specific styles */
+        .progress-bar-bg {
+            background-color: #374151;
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+            transition: width 0.8s ease-in-out;
+        }
+    </style>
+</head>
+<body class="w-full overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 p-4 bg-black bg-opacity-50 backdrop-blur-lg border-b border-gray-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">HK</a>
+            <div class="hidden md:flex space-x-6 text-lg">
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#publications" class="hover:text-blue-400 transition">Publications</a>
+                <a href="#education" class="hover:text-blue-400 transition">Education</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden p-2">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-800 rounded">About</a>
+            <a href="#skills" class="block py-2 px-4 text-sm hover:bg-gray-800 rounded">Skills</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-800 rounded">Projects</a>
+            <a href="#publications" class="block py-2 px-4 text-sm hover:bg-gray-800 rounded">Publications</a>
+            <a href="#education" class="block py-2 px-4 text-sm hover:bg-gray-800 rounded">Education</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-800 rounded">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center reveal">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight">
+                Bhupathi Hari Krishna
+            </h1>
+            <p class="mt-4 text-2xl md:text-3xl font-medium gradient-text">
+                Aspiring Full Stack Developer & Innovator
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">
+                    View My Work
+                </a>
+                <a href="mailto:bhupathiharikrishna143@gmail.com" class="border-2 border-blue-500 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105">
+                    Get In Touch
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 reveal">
+            <h2 class="section-header text-4xl font-bold mb-12 text-center">About Me</h2>
+            <div class="text-center max-w-3xl mx-auto">
+                <p class="text-xl text-gray-300 leading-relaxed">
+                    I am a dedicated and passionate IT student seeking an opportunity to leverage my skills in software development and problem-solving. Eager to contribute to a dynamic team, I am committed to continuous learning, exploring new technologies, and growing both personally and professionally while helping the company achieve its goals.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Dashboard Section -->
+        <section id="skills" class="py-20 reveal">
+             <h2 class="section-header text-4xl font-bold mb-12 text-center">Technical Skills</h2>
+             <div id="dashboard-container" class="space-y-12">
+                <!-- Dashboard will be injected here -->
+             </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 reveal">
+            <h2 class="section-header text-4xl font-bold mb-12 text-center">My Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">Virtual Try-On System</h3>
+                    <p class="text-gray-400">Developed an immersive application that overlays fashion items onto a user's live video feed using real-time image processing. It enhances the online shopping experience with 3D model interaction and personalized fit recommendations.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">YouTube Transcript Summarizer</h3>
+                    <p class="text-gray-400">Created a tool that summarizes YouTube video transcripts and converts them into a downloadable PDF. The application supports multiple languages, making content more accessible and digestible.</p>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-2xl font-bold text-white mb-3">Hospital Management System</h3>
+                    <p class="text-gray-400">Built a comprehensive hospital management system with ASP.NET, featuring a modern glassmorphism UI. The system streamlines operations with real-time appointment scheduling, patient history tracking, and automated billing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="py-20 reveal">
+            <h2 class="section-header text-4xl font-bold mb-12 text-center">Publications</h2>
+            <div class="max-w-3xl mx-auto space-y-8">
+                <a href="https://drive.google.com/file/d/1v2C9iK48kCUunyfpFPcqCs4QmmQHuhp8/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="block card p-6 cert-card">
+                    <h3 class="text-2xl font-bold text-white">Video Transcript Summarizer</h3>
+                    <p class="text-blue-400 font-medium">Published Paper - ICONNECT-2023</p>
+                    <p class="mt-3 text-gray-300">Co-authored a research paper on an innovative system using NLP and BERT for video transcript summarization, published in the E3S Web of Conferences. Click to view.</p>
+                </a>
+                <a href="https://drive.google.com/file/d/1TF2HtzBHsBc5GwtNB95ZVsQwlTTZaJ1S/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="block card p-6 cert-card">
+                    <h3 class="text-2xl font-bold text-white">Project Documentation</h3>
+                    <p class="text-blue-400 font-medium">Main Project Paper</p>
+                    <p class="mt-3 text-gray-300">Detailed documentation and report for the main project. Click to view.</p>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20 reveal">
+            <h2 class="section-header text-4xl font-bold mb-12 text-center">Certifications</h2>
+            <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
+                <a href="https://drive.google.com/file/d/193jr23Dge41mYXHvxFpG9vHves9R8hap/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card cert-card p-4 flex items-center justify-center h-24"><p>Programming in Python</p></a>
+                <a href="https://drive.google.com/file/d/1p6Svg1v-wUwvaBpF7XAxFynhlwNaSTvg/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="card cert-card p-4 flex items-center justify-center h-24"><p>Core Java</p></a>
+                <a href="https://drive.google.com/file/d/1Q6NqC01ZZmh8CqRGGg9E9tGfIJRAKkqj/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card cert-card p-4 flex items-center justify-center h-24"><p>ML: Regression</p></a>
+                <a href="https://drive.google.com/file/d/1h7TWjnlc2K1NvG-yUlmjMW7yzjajmlbx/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card cert-card p-4 flex items-center justify-center h-24"><p>ML: Classification</p></a>
+                <a href="https://drive.google.com/file/d/10V0tgAZX3mCyLJrnO3dqvnJjiITPzWY6/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="card cert-card p-4 flex items-center justify-center h-24"><p>Intro to Cloud (AWS)</p></a>
+                <a href="https://drive.google.com/file/d/1v2SIpzdRglARob-16APr_jGaFo92LFK4/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card cert-card p-4 flex items-center justify-center h-24"><p>Generative AI</p></a>
+                <a href="https://drive.google.com/file/d/13M1fQE3d8w5uCMZjKC3acbcH6fMKa2xn/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card cert-card p-4 flex items-center justify-center h-24"><p>Introduction to AI</p></a>
+                <a href="https://drive.google.com/file/d/1bREqFsUsCi48ntyzaS_Nlbhvcqci6fhj/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card cert-card p-4 flex items-center justify-center h-24"><p>Python for Data Science</p></a>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 reveal">
+            <h2 class="section-header text-4xl font-bold mb-12 text-center">Education</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-6 text-center">
+                    <h3 class="text-xl font-bold text-white">B.TECH (IT)</h3>
+                    <p class="text-blue-400">GMRIT (Autonomous)</p>
+                    <p class="text-gray-500">2021-2025</p>
+                    <p class="mt-2 text-2xl font-bold gradient-text">8.2 CGPA</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <h3 class="text-xl font-bold text-white">Intermediate (MPC)</h3>
+                    <p class="text-blue-400">Sri Chaitanya Jr College, Vizag</p>
+                    <p class="text-gray-500">2019-2021</p>
+                    <p class="mt-2 text-2xl font-bold gradient-text">92.8%</p>
+                </div>
+                <div class="card p-6 text-center">
+                    <h3 class="text-xl font-bold text-white">Matriculation (10th)</h3>
+                    <p class="text-blue-400">Ravindra Bharathi School</p>
+                    <p class="text-gray-500">2018-2019</p>
+                    <p class="mt-2 text-2xl font-bold gradient-text">9.8 GPA</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center reveal">
+            <h2 class="section-header text-4xl font-bold mb-8">Let's Connect</h2>
+            <p class="text-xl text-gray-400 mb-8">I'm currently looking for new opportunities. Feel free to reach out!</p>
+            <a href="mailto:bhupathiharikrishna143@gmail.com" class="text-2xl font-semibold gradient-text hover:brightness-125 transition">
+                bhupathiharikrishna143@gmail.com
+            </a>
+            <p class="mt-4 text-xl text-gray-400">Phone: 8919148398</p>
+            <div class="mt-8 flex justify-center space-x-8">
+                <a href="https://github.com/harikrishna376" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition transform hover:scale-110" title="GitHub">
+                    <i data-feather="github" class="w-8 h-8"></i>
+                </a>
+                <a href="https://leetcode.com/u/krishna_2004___/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition transform hover:scale-110" title="LeetCode">
+                    <svg class="w-8 h-8" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>LeetCode</title><path d="M13.483 0a1.374 1.374 0 0 0-.961.406L.646 12.261a1.374 1.374 0 0 0 0 1.943l11.876 11.876a1.374 1.374 0 0 0 1.943 0l11.876-11.876a1.374 1.374 0 0 0 0-1.943L14.444.406a1.374 1.374 0 0 0-.961-.406zM18.13 15.959l-2.115 2.115-3.302-3.302-3.302 3.302-2.115-2.115 3.302-3.302-3.302-3.302 2.115-2.115 3.302 3.302 3.302-3.302 2.115 2.115-3.302 3.302 3.302 3.302z"></path></svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-6">
+        <div class="max-w-7xl mx-auto text-center text-gray-500">
+            <p>&copy; 2025 Bhupathi Hari Krishna. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Feather Icons Initialization ---
+        feather.replace();
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Reveal on Scroll Animation ---
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // --- Skills Dashboard Logic ---
+        const skillsData = {
+            "Programming Languages": {
+                icon: `<i data-feather="code" class="w-8 h-8 text-blue-400"></i>`,
+                items: [ { name: "Python", level: 90 }, { name: "Java", level: 80 }, { name: "C", level: 70 }, { name: "JavaScript", level: 85 }, { name: "C#", level: 65 }, { name: "C++", level: 70 }, { name: "PHP", level: 55 }, { name: "R", level: 50 }, ]
+            },
+            "Technologies & Fields": {
+                icon: `<i data-feather="database" class="w-8 h-8 text-purple-400"></i>`,
+                items: [ { name: "Data Science", level: 88 }, { name: "Frontend Development", level: 82 }, { name: "Cyber Security", level: 70 }, ]
+            },
+            "Mathematics": {
+                icon: `<i data-feather="bar-chart-2" class="w-8 h-8 text-green-400"></i>`,
+                items: [ { name: "Calculus", level: 92 }, { name: "Linear Algebra", level: 85 }, { name: "Probability & Statistics", level: 80 }, ]
+            }
+        };
+
+        const dashboardContainer = document.getElementById('dashboard-container');
+
+        function createSkillCard(item) {
+            return `<div class="card p-5 flex flex-col justify-between"><div><h3 class="font-semibold text-lg text-white">${item.name}</h3><div class="flex items-center justify-between mt-4"><span class="text-sm font-medium text-gray-400">Proficiency</span><span class="text-sm font-bold text-blue-300">${item.level}%</span></div><div class="w-full progress-bar-bg rounded-full h-2.5 mt-2"><div class="progress-bar h-2.5 rounded-full" style="width: 0%" data-level="${item.level}"></div></div></div></div>`;
+        }
+
+        function createCategorySection(category, data) {
+            const itemsHtml = data.items.map(createSkillCard).join('');
+            return `<section><div class="flex items-center mb-6">${data.icon}<h3 class="text-2xl sm:text-3xl font-bold text-white ml-3">${category}</h3></div><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">${itemsHtml}</div></section>`;
+        }
+
+        function initializeDashboard() {
+            let fullHtml = '';
+            for (const category in skillsData) {
+                fullHtml += createCategorySection(category, skillsData[category]);
+            }
+            dashboardContainer.innerHTML = fullHtml;
+            feather.replace();
+
+            const skillsSection = document.getElementById('skills');
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    const progressBars = document.querySelectorAll('.progress-bar');
+                    progressBars.forEach(bar => {
+                        const level = bar.getAttribute('data-level');
+                        bar.style.width = `${level}%`;
+                    });
+                    observer.disconnect();
+                }
+            }, { threshold: 0.1 });
+
+            observer.observe(skillsSection);
+        }
+        
+        window.onload = () => {
+            initializeDashboard();
+        };
+
+    </script>
+</body>
+</html>
